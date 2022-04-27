@@ -9,7 +9,7 @@ Route::get('admin/user/login',[LoginController::class,'index'])->name('login');
 #Hoặc sử dụng cái này
 #Route::get('login',[LoginController::class,'index'])->name('login');
 
-
+//helo
 Route::post('admin/user/login/store',[LoginController::class,'store']);
 
 Route::middleware(['auth'])->group(function (){
