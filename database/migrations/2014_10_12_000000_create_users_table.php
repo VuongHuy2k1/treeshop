@@ -27,18 +27,24 @@ return new class extends Migration {
             $table->string('password');
             $table->rememberToken();
             $table->tinyInteger('status')->default(1);
-            $table->foreignId('created_by')->nullable()->constrained('users');
-            $table->foreignId('updated_by')->nullable()->constrained('users');
+            $table
+                ->foreignId('created_by')
+                ->nullable()
+                ->constrained('users');
+            $table
+                ->foreignId('updated_by')
+                ->nullable()
+                ->constrained('users');
             $table->timestamps();
         });
 
         DB::table('users')->insert([
             'name' => 'Admin',
-            'email' => 'thenguyen1024@gmail.com',
-            'username' => 'fudio101',
+            'email' => 'huy2001@gmail.com',
+            'username' => 'HuyHs',
             'role' => 1,
             'gender' => 1,
-            'password' => bcrypt('Ng01637202484'),
+            'password' => bcrypt('Huy12345'),
         ]);
     }
 
